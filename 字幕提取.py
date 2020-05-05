@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 "提取.ass字幕文件中所有字幕文字并输出txt格式文档"

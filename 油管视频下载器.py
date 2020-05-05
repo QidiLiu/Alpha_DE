@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 "为youtube-dl加了个UI操作界面"

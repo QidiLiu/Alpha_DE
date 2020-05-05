@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 "将webm格式视频转为mp4格式视频"
