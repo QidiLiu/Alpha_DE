@@ -23,7 +23,7 @@ def find_ass():
         with open(ass_file.name, 'w', encoding='UTF-8') as file_write:
             for line in lines:
                 if match('Dialogue:', line) is not None:
-                    new_line = ''.join(list(line)[:50])
+                    new_line = ''.join(list(line)[:41])+',,0,0,0,,'
                     line = line+new_line+'\n'
                 file_write.write(line)
         showinfo('处理成功！！！', '顺便一提，你真好看')
