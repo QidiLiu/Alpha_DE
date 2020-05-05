@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 "方便打轴时自动为后续翻译留中文位置"
