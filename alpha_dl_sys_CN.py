@@ -10,13 +10,16 @@ import os
 import re
 
 # Ref.
+# https://zhuanlan.zhihu.com/p/27718783
 # https://github.com/ytdl-org/youtube-dl
 
 ft_1 = ('Microsoft YaHei', 10, 'bold')
+with open('proxy.txt', 'r') as f:
+    proxy = f.read()
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title('阿尔法小分队视频下载器')
+    root.title('阿尔法小分队视频下载器（代理版）')
     root.iconbitmap('Alpha.ico')
 
     fr_1 = tk.Frame(root)
@@ -32,7 +35,7 @@ if __name__ == "__main__":
         link_entry.grid_forget()
         wait_label.grid(row=0, column=0)
         root.update()
-        os.system('.\\youtube-dl --all-subs -f bestvideo+bestaudio -o "/downloads/%(title)s.%(ext)s" ' + link)
+        os.system('.\\youtube-dl --proxy 127.0.0.1:' + proxy + ' --all-subs -f bestvideo+bestaudio -o "/downloads/%(title)s.%(ext)s" ' + link)
         wait_label.grid_forget()
         link_entry.grid(row=0, column=0)
     
