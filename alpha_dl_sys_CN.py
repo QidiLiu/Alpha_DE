@@ -35,7 +35,7 @@ if __name__ == "__main__":
         link_entry.grid_forget()
         wait_label.grid(row=0, column=0)
         root.update()
-        os.system('.\\youtube-dl --proxy 127.0.0.1:' + proxy + ' --all-subs -f bestvideo+bestaudio -o "/downloads/%(title)s.%(ext)s" ' + link)
+        os.system('.\\youtube-dl.exe --proxy 127.0.0.1:' + proxy + ' --all-subs -f bestvideo+bestaudio -o "/downloads/%(title)s.%(ext)s" ' + link)
         wait_label.grid_forget()
         link_entry.grid(row=0, column=0)
     
@@ -46,11 +46,11 @@ if __name__ == "__main__":
         for f in os.listdir('.'):
             if f.split('.')[-1] == 'webm' or f.split('.')[-1] == 'mkv':
                 file_name = f.split(f.split('.')[-1])[0]
-                os.system(str(f'ffmpeg -i "{f}" "{file_name}"mp4'))
+                os.system(str(f'.\\ffmpeg.exe -i "{f}" "{file_name}"mp4'))
                 os.remove(f)
             elif f.split('.')[-1] == 'vtt':
                 file_name = f.split(f.split('.')[-1])[0]
-                os.system(str(f'ffmpeg -i "{f}" "{file_name}"ass'))
+                os.system(str(f'.\\ffmpeg.exe -i "{f}" "{file_name}"ass'))
                 #os.remove(f)
     convert_button = tk.Button(fr_1, text='开始转码', font=ft_1, command=convert2mp4)
     convert_button.grid(row=0, column=1)
